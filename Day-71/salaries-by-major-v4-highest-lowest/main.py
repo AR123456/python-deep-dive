@@ -1,0 +1,26 @@
+import pandas as pd
+df = pd.read_csv("salaries_by_college_major.csv")
+df.head()
+# print(df.shape)
+# print(df.columns)
+# print(df.isna())
+# print(df.tail())
+clean_df = df.dropna()
+# print(clean_df.tail())
+# print(clean_df['Starting Median Salary'])
+# print(clean_df['Starting Median Salary'].max())
+# print(clean_df['Starting Median Salary'].idxmax())
+# print(clean_df['Undergraduate Major'].loc[43])
+# print(clean_df['Undergraduate Major'][43])
+# print(clean_df.loc[43])
+# clean_df['Mid-Career 90th Percentile Salary'].max()
+# clean_df['Mid-Career 90th Percentile Salary'].idxmax()
+# clean_df['Undergraduate Major'].loc[17]
+# highest
+# print(clean_df['Mid-Career Median Salary'].max())
+# print(f"Index for the max mid career salary: {clean_df['Mid-Career Median Salary'].idxmax()}")
+# print(clean_df['Undergraduate Major'][8])
+#lowest
+# print(clean_df['Starting Median Salary'].min())
+# print(clean_df['Undergraduate Major'].loc[clean_df['Starting Median Salary'].idxmin()])
+print(clean_df.loc[clean_df['Mid-Career Median Salary'].idxmin()])
